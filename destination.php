@@ -33,8 +33,8 @@
     </section>
     <!-- Header section ends -->
 
-<div class="heading" style="background:url(images/header-bg-1.png) no-repeat">
-    <h1>About Us</h1>
+<div class="heading" style="background:url(images/header-bg-2.png) no-repeat">
+    <h1>Destinations</h1>
 </div>
 
 
