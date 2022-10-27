@@ -1,11 +1,11 @@
 <?php
-// leace php tag open
+// leave php tag open
 $serverName ="localhost";
 $dBUsername ="root";
 $dBPassword ="";
 $dBName ="flightbooking";
 
-$conn = mysqli_connect($serverName, $dBUsername, $dBName, $dBPassword, );
+$conn = mysqli_connect($serverName, $dBUsername, $dBName, $dBPassword);
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());

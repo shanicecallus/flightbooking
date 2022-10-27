@@ -1,4 +1,5 @@
 <?php
+
 if(isset($_POST["submit"])) {
     
     $firstname = $_POST["firstname"];
@@ -31,6 +32,7 @@ if(isset($_POST["submit"])) {
         exit();
     }
 
+    createUser($conn, $firstname, $lastname, $email, $pwd);
 }
 else {
     header("location: ../home.php");
