@@ -26,6 +26,8 @@
             <a href="about.php">About</a>
             <a href="destination.php">Destination</a>
             <a href="book.php">Book</a>
+            <a href="book.php">Sign Up</a>            
+            <a href="book.php">Log In</a>
         </nav>
 
         <div id="menu-btn" class="fas fa-bars"></div>
