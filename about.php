@@ -17,7 +17,7 @@
    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header section starts -->
+    <!-- Header section starts here -->
     <section class="header">
         <a href="home.php" class="logo">Travel.</a>
 
