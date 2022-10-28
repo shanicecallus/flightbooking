@@ -1,10 +1,9 @@
 <?php
-
 if(isset($_POST["submit"])) {
     
     $firstname = $_POST["firstname"];
     $lastname = $_POST["lastname"];
-    $username = $_POST["email"];
+    $username = $_POST["username"];
     $pwd = $_POST["pwd"];
     $pwdrepeat = $_POST["pwdrepeat"];
 
@@ -15,14 +14,14 @@ if(isset($_POST["submit"])) {
         header("location: ../signup.php?error=emptyinput");
         exit();
     }
-    if (invalidUid($username) !== false) {
-        header("location: ../signup.php?error=invalidUid");
-        exit();
-    }
-    if (invalidEmail($username) !== false) {
-        header("location: ../signup.php?error=invalidemail");
-        exit();
-    }
+    // if (invalidUid($username) !== false) {
+    //     header("location: ../signup.php?error=invalidUid");
+    //     exit();
+    // }
+    // if (invalidEmail($username) !== false) {
+    //     header("location: ../signup.php?error=invalidemail");
+    //     exit();
+    // }
     if (pwdMatch($pwd, $pwdrepeat) !== false) {
         header("location: ../signup.php?error=passwordsdontmatch");
         exit();
@@ -32,7 +31,7 @@ if(isset($_POST["submit"])) {
         exit();
     }
 
-    createUser($conn, $firstname, $lastname, $email, $pwd);
+    createUser($conn, $firstname, $lastname, $username, $pwd);
 }
 else {
     header("location: ../home.php");

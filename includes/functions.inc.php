@@ -1,5 +1,4 @@
 <?php
-
 function emptyInputSignUp($firstname, $lastname, $username, $pwd, $pwdrepeat) {
     $result = true; 
     if (empty($firstname) || empty($lastname) || empty($username) || empty($pwd) || empty($pwdrepeat)){
@@ -22,15 +21,11 @@ function invalidUid($username) {
     return $result;
 }
 
-function invalidEmail($username) {
-    $result =true; 
-    if (!filter_var($username, FILTER_VALIDATE_EMAIL)) { //search algorithm to match with what the user typed in
-        $result = true;
+function invalidEmail($username) { 
+    if (filter_var($username, FILTER_VALIDATE_EMAIL) === false) { //search algorithm to match with what the user typed in
+        return true;
     }
-    else {
-        $result = false;
-    }
-    return $result;
+    return false;
 }
 
 function pwdMatch($pwd, $pwdrepeat) {
@@ -45,7 +40,7 @@ function pwdMatch($pwd, $pwdrepeat) {
 }
 
 function emailexists($conn, $username) {
-    $sql = "select * from users where usersuid = ? or email = ?;"; 
+    $sql = "select * from users where email = ?;"; 
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ...signup.php?error=stmtfailed");
@@ -69,7 +64,7 @@ function emailexists($conn, $username) {
 }
 
 function createUser($conn, $firstname, $lastname, $username, $pwd) {
-    $sql = "insert into users (firstname, lastname, email, pwd) values (?, ?, ?, ?);"; 
+    $sql = "insert into users (firstName, lastName, email, pwd) values (?, ?, ?, ?);"; 
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ...signup.php?error=stmtfailed");
@@ -78,7 +73,7 @@ function createUser($conn, $firstname, $lastname, $username, $pwd) {
 
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($stmt, "ssss", $firstname, $lastname, $username, $hashedpwd);
+    mysqli_stmt_bind_param($stmt, "ssss", $firstname, $lastname, $username, $hashedPwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("location: ...signup.php?error=none");
