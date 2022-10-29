@@ -12,6 +12,31 @@
     <input type="password" name="pwdrepeat" placeholder="Repeat Password">
     <button type="submit" name="submit">Sign Up</button>
     </form>
+    <?php
+        if (isset($_GET["error"])) {
+            if($_GET["error"] == "emptyinput") {
+                echo "<p>Fill in all fields</p>";
+            }
+            else if($_GET["error"] == "invalidUid") {
+                echo "<p>Enter a valid email</p>";
+            }
+            else if($_GET["error"] == "invalidEmail") {
+                echo "<p>Enter a valid email</p>";
+            }
+            else if($_GET["error"] == "passwordsdontmatch") {
+                echo "<p>Passwords don't match</p>";
+            }
+            else if($_GET["error"] == "stmtfailed") {
+                echo "<p>Something went wrong, please try again later</p>";
+            }
+            else if($_GET["error"] == "emailexists") {
+                echo "<p>There is already an account associated with this email</p>";
+            }
+            else if($_GET["error"] == "none") {
+                echo "<p>You have signed up!</p>";
+            }
+        }
+        ?>
 </section>
 
 <?php
