@@ -66,8 +66,8 @@ section{
     color: var(--black);
 }
 
-.header.navbar a{
-    font-size: 2rem;
+.header .navbar a{
+    font-size: 1.5rem;
     margin-left: 2rem;
     color:var(--black);
     display: inline-block;
@@ -84,13 +84,7 @@ section{
     display:none;
 }
 
-.carousel-item{
-    height:100vh;
-    min-height: 300px;
-    background: no-repeat scroll center scroll;
-    --webkit-background-size: cover;
-    background-size: cover;
-}
+
 
 
 
