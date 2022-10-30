@@ -70,6 +70,7 @@ section{
     font-size: 2rem;
     margin-left: 2rem;
     color:var(--black);
+    display: inline-block;
 }
 
 .header .navbar a:hover{
@@ -82,6 +83,21 @@ section{
     color:var(--black);
     display:none;
 }
+
+.carousel-item{
+    height:100vh;
+    min-height: 300px;
+    background: no-repeat scroll center scroll;
+    --webkit-background-size: cover;
+    background-size: cover;
+}
+
+
+
+
+
+
+
 
 
 
@@ -172,8 +188,8 @@ section{
   
      .header .navbar a{
         display: block;
-        margin:2rem;
-        text-align: center;
+        margin: 2rem;
+        text-align: block;
      }
   
 }
