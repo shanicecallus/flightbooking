@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,8 +29,16 @@
             <a href="about.php">About</a>
             <a href="destination.php">Destination</a>
             <a href="book.php">Book</a>
-            <a href="signup.php">Sign Up</a>            
-            <a href="login.php">Log In</a>
+            <?php 
+                if (isset($_SESSION["useruid"])) {
+                    echo "<a href='profile.php'>My Profile</a>";
+                    echo "<a href='includes/logout.inc.php'>Log out</a>";
+                }
+                else {
+                    echo "<a href='signup.php'>Sign Up</a>";
+                    echo "<a href='login.php'>Log In</a>";
+                }
+            ?>
         </nav>
 
         <div id="menu-btn" class="fas fa-bars"></div>
