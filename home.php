@@ -1,6 +1,11 @@
 <?php
     include_once'header.php'
 ?>
+<style>
+    <?php
+        include 'CSS/style.css';
+    ?>
+</style>
 
 <section class="home">
     <div class="swiper home-slider">

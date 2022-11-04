@@ -120,7 +120,7 @@ section{
     padding:0;
 }
 
-.home .slide{
+.home .swiper-slide{
     text-align: center;
     padding:2rem;
     display: flex;

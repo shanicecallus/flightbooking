@@ -2,6 +2,14 @@
     include_once'header.php'
 ?>
 
+<style>
+    <?php
+        include 'CSS/style.css';
+    ?>
+</style>
+
+<img class="headerimg" src="images/airplane-header.jpg" alt="header" width=100% height="200">
+
 <section class="login-form">
     <h2>Login</h2>
     <form  action="includes/login.inc.php" method="post">
