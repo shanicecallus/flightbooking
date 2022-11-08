@@ -18,7 +18,7 @@
     <input type="text" name="username" placeholder="joeborg@email.com">
     <input type="password" name="pwd" placeholder="Password">
     <input type="password" name="pwdrepeat" placeholder="Repeat Password">
-    <button type="submit" name="submit">Sign Up</button>
+    <button type="submit" name="submit" class="btn">Sign Up</button>
     </form>
     <?php
         if (isset($_GET["error"])) {
