@@ -31,7 +31,7 @@
             </div>
             <div class="inputBox">
                 <span>Address:</span>
-                <input type="number" placeholder="Enter your address here" name="address">
+                <input type="text" placeholder="Enter your address here" name="address">
             </div>
             <div class="inputBox">
                 <span>Number of passengers:</span>
