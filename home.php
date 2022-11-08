@@ -1,6 +1,7 @@
 <?php
     include_once'header.php'
 ?>
+
 <style>
     <?php
         include 'CSS/style.css';
