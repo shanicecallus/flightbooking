@@ -39,11 +39,11 @@
             </div>
             <div class="inputBox">
                 <span>Destination:</span>
-                <input type="number" placeholder="Enter your destination here" name="location">
+                <input type="text" placeholder="Enter your destination here" name="destination">
             </div>
             <div class="inputBox">
                 <span>Arrivals:</span>
-                <input type="date" name="arrival">
+                <input type="date" name="arrivals">
             </div>
             <div class="inputBox">
                 <span>Departure:</span>
