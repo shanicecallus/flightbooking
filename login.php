@@ -10,7 +10,7 @@
 
 <img class="headerimg" src="images/airplane-header.jpg" alt="header" width=100% height="200">
 
-<section class="login-form>
+<section class="login-form">
     <h2>Login</h2>
     <form  action="includes/login.inc.php" method="post">
     <input type="text" name="uid" placeholder="Enter Your Email">
