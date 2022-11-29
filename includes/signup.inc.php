@@ -1,4 +1,7 @@
 <?php
+
+#set_error_handler(createUser($conn, $firstname, $lastname, $username, $pwd));
+
 if(isset($_POST["submit"])) {
     
     $firstname = $_POST["firstname"];
