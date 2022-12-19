@@ -17,6 +17,8 @@
         mysqli_query($conn, $request);
 
         header('location:book.php');
+
+    require_once 'checkout.php';
     }
     else {
         echo 'Something went wrong, please try again.';
