@@ -1,6 +1,7 @@
 <?php
     include_once 'includes/dbh.inc.php';
     include_once 'header.php';
+    include_once 'includes/functions.inc.php';
 ?>
 
 <style>
@@ -14,7 +15,8 @@
 <section class="MyProfile">
 
     <?php
-        $sql = "select * from users;";
+        #$username = $_POST['username'];
+        $sql = "select firstname, lastname, email from users where userid = 2 ;";
         #result is the data which is obtained from the SQL query in the db
         $result = mysqli_query($conn, $sql);
         #ResultCheck checks if there is an actual variable, therefore, if data is being obtained from db
