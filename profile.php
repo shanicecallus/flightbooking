@@ -16,7 +16,8 @@
 
     <?php
         #$username = $_POST['username'];
-        $sql = "select firstname, lastname, email from users where userid = 2 ;";
+        $currentUser = $_SESSION['username'];
+        $sql = "select firstname, lastname, email from users where email = '$currentUser'";
         #result is the data which is obtained from the SQL query in the db
         $result = mysqli_query($conn, $sql);
         #ResultCheck checks if there is an actual variable, therefore, if data is being obtained from db
@@ -30,6 +31,7 @@
             <h3>First Name</h3><td><?php echo $row['firstname']; ?> 
             <h3>Last Name</h3><td><?php echo $row['lastname'];
             }
+
         }
     ?>
 </section>
