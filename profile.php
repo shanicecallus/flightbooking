@@ -1,9 +1,6 @@
 <?php
-include_once 'includes/dbh.inc.php';
-?>
-
-<?php
-include_once 'header.php';
+    include_once 'includes/dbh.inc.php';
+    include_once 'header.php';
 ?>
 
 <style>
@@ -14,17 +11,26 @@ include_once 'header.php';
 
 <!-- My profile code starts here -->
 <body>
-    <?php
-    $sql = "select * from users;";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
+<section class="MyProfile">
 
-    if ($resultCheck > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            echo $row['email'];
-        }
-    }
+    <?php
+        $sql = "select * from users;";
+        #result is the data which is obtained from the SQL query in the db
+        $result = mysqli_query($conn, $sql);
+        #ResultCheck checks if there is an actual variable, therefore, if data is being obtained from db
+        $resultCheck = mysqli_num_rows($result);
+
+        #loop where if resultCheck has value, it can execute the echoing of data
+        if ($resultCheck > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
     ?>
+            <h3>Email</h3><td><?php echo $row['email']; ?> 
+            <h3>First Name</h3><td><?php echo $row['firstname']; ?> 
+            <h3>Last Name</h3><td><?php echo $row['lastname'];
+            }
+        }
+    ?>
+</section>
 </body>
 <!-- My profile code ends here -->
 
