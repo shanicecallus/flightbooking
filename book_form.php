@@ -16,9 +16,8 @@
 
         mysqli_query($conn, $request);
 
-        header('location:book.php');
+        header('location:https://book.stripe.com/test_dR6g085UE5IP6zueUU');
 
-    require_once 'checkout.php';
     }
     else {
         echo 'Something went wrong, please try again.';

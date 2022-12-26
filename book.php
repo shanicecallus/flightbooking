@@ -50,21 +50,9 @@
                 <input type="date" name="departure">
             </div>
         </div>
-        <button id="btn">Checkout</button>
-        <input type="submit" value="Submit" id="btn" class="btn" name="send">
-        <script src="http://js.stripe.com/v3/"></script>
-        <script src-=script.js"></script>
 
-        <!-- <script
-                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                data-key="Your Test Key"
-                data-amount=<?php echo str_replace(",","",$_GET["price"]) * 100?>
-                data-name="<?php echo $_GET["item_name"]?>"
-                data-description="<?php echo $_GET["item_name"]?>"
-                data-image="<?php echo $_GET["image"]?>"
-                data-currency="inr"
-                data-locale="auto">
-        </script> -->
+        <input type="submit" value="Submit" id="btn" class="btn" name="send">
+
     </form>
 
 </section>
