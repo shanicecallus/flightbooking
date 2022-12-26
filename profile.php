@@ -19,7 +19,7 @@
         #$username = $_POST['username'];
         #session_start();
         $currentUser = $_SESSION['useruid'];
-        $sql = "select * from users where userid = '$currentUser'";
+        $sql = "select * from users where userid ='{$currentUser}'";
         #result is the data which is obtained from the SQL query in the db
         $result = mysqli_query($conn, $sql);
         #ResultCheck checks if there is an actual variable, therefore, if data is being obtained from db
@@ -34,6 +34,10 @@
             <h3>Last Name: </h3><td><?php echo $row['lastname']; ?></td> <?php
 
             }
+
+        }
+        else{
+            echo "Failed to get Profile Details";
         }
     ?>
 </section>
