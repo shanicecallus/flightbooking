@@ -11,13 +11,15 @@
 </style>
 
 <!-- My profile code starts here -->
+
 <body>
 <section class="MyProfile">
 
     <?php
         #$username = $_POST['username'];
-        $currentUser = $_SESSION['username'];
-        $sql = "select firstname, lastname, email from users where email = '$currentUser'";
+        #session_start();
+        $currentUser = $_SESSION['useruid'];
+        $sql = "select * from users where userid = '$currentUser'";
         #result is the data which is obtained from the SQL query in the db
         $result = mysqli_query($conn, $sql);
         #ResultCheck checks if there is an actual variable, therefore, if data is being obtained from db
@@ -27,15 +29,16 @@
         if ($resultCheck > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
     ?>
-            <h3>Email: </h3><td><?php echo $row['username']; ?> 
-            <h3>First Name: </h3><td><?php echo $row['firstname']; ?> 
-            <h3>Last Name: </h3><td><?php echo $row['lastname'];
-            }
+            <h3>Email: </h3><td><?php echo $row['email']; ?> </td>
+            <h3>First Name: </h3><td><?php echo $row['firstname']; ?> </td>
+            <h3>Last Name: </h3><td><?php echo $row['lastname']; ?></td> <?php
 
+            }
         }
     ?>
 </section>
 </body>
+
 <!-- My profile code ends here -->
 
 <!-- My Bookings code starts here -->
