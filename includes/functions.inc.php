@@ -108,9 +108,10 @@ function loginUser($conn, $username, $pwd) {
     }
     else if ($checkPwd === true) {
         session_start(); 
-        $_SESSION["userid"] = $emailExists["usersId"];
+        $_SESSION["userid"] = $emailExists["userid"];
         $_SESSION["useruid"] = $emailExists["email"];
         header("location: ../home.php");
         exit();
     }
 }
+

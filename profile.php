@@ -18,7 +18,7 @@
     <?php
         #$username = $_POST['username'];
         #session_start();
-        $currentUser = $_SESSION['useruid'];
+        $currentUser = $_SESSION['userid'];
         $sql = "select * from users where userid ='{$currentUser}'";
         #result is the data which is obtained from the SQL query in the db
         $result = mysqli_query($conn, $sql);
