@@ -1,13 +1,21 @@
-
+<!DOCTYPE html>
+<html lang="en">
 <?php
     include_once'header.php'
 ?>
+
+<!-- Swiper css link -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
 
 <style>
     <?php
         include 'CSS/style.css';
     ?>
 </style>
+
 
 <img class="headerimg" src="images/Berlin.jpg" alt="header" width=100% height="400">
 
@@ -39,8 +47,100 @@
 </section>
 <!-- About Section Ends Here -->
 
+<!-- Reviews section starts here -->
+
+
+<section class="reviews">
+
+    <div class="swiper reviews-slider">
+
+        <div class="swiper-wrapper">
+            <div class="swiper-slider slide">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem quisquam beatae nostrum reprehenderit, ipsam fuga alias recusandae unde illum minus enim nemo mollitia neque quos cum qui quas voluptates.</p>
+                <h3>Karla Farrugia</h3>
+                <span>Traveler</span>
+                <img src="images/pic-1.png" alt="">
+            </div>
+            <div class="swiper-slider slide">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatibus consequatur assumenda nostrum, quia iure ducimus sequi esse voluptates blanditiis!</p>
+                <h3>Joe Borg</h3>
+                <span>Traveler</span>
+                <img src="images/pic-2.png" alt="">
+            </div>
+            <div class="swiper-slider slide">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae voluptatibus porro placeat, blanditiis nisi eaque doloremque, tempora odit laudantium, inventore eius ad accusamus ullam ipsam corrupti quam debitis. Quae voluptate expedita at aspernatur, neque corporis ipsa. Molestiae voluptatibus illum eligendi.
+                </p>
+                <h3>Joe Borg</h3>
+                <span>Traveler</span>
+                <img src="images/pic-3.png" alt="">
+            </div>
+            <div class="swiper-slider slide">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente commodi blanditiis mollitia ducimus repudiandae, ipsum incidunt quia, quibusdam quisquam minus alias recusandae, sit vel ea iste quam accusantium itaque eaque velit consequuntur tempore quidem. Nesciunt in fugiat impedit accusamus ducimus.</p>
+                <h3>Joe Borg</h3>
+                <span>Traveler</span>
+                <img src="images/pic-4.png" alt="">
+            </div>
+            <div class="swiper-slider slide">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente commodi blanditiis mollitia ducimus repudiandae, ipsum incidunt quia, quibusdam quisquam minus alias recusandae, sit vel ea iste quam accusantium itaque eaque velit consequuntur tempore quidem. Nesciunt in fugiat impedit accusamus ducimus.</p>
+                <h3>Joe Borg</h3>
+                <span>Traveler</span>
+                <img src="images/pic-5.png" alt="">
+            </div>
+            <div class="swiper-slider slide">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente commodi blanditiis mollitia ducimus repudiandae, ipsum incidunt quia, quibusdam quisquam minus alias recusandae, sit vel ea iste quam accusantium itaque eaque velit consequuntur tempore quidem. Nesciunt in fugiat impedit accusamus ducimus.</p>
+                <h3>Joe Borg</h3>
+                <span>Traveler</span>
+                <img src="images/pic-5.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Reviews section ends here -->
+
 <?php
     include_once'footer.php'
 ?>
-
+</html>
 
