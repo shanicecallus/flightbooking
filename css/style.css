@@ -395,14 +395,62 @@ section{
     display: block;
 }
 
-.reivews .slide img{
+.reviews .slide img{
     height: 7rem;
     width: 7rem;
     border-radius: 50%;
     margin-top: 1rem;
 }
 
+.destinations .box-container .box{
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+}
 
+.destinations .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:2rem;
+}
+
+.destinations .load-more{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.destinations .box-container .box .content p{
+    font-size: 1.5rem;
+    color: var(--light-black);
+    line-height: 2;
+    padding:1rem 0;
+}
+
+.destinations .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.destinations .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+
+.destinations .box-container .box .image{
+    height: 25rem;
+    overflow: hidden;
+}
+
+.destinations .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.destinations .box-container .box:hover .image img{
+    transform: scale(1.1);
+}
 
 
 
