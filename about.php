@@ -4,15 +4,10 @@
     include_once'header.php'
 ?>
 
-<!-- Swiper css link -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-/>
-
 <style>
     <?php
         include 'CSS/style.css';
+        include 'swiper-bundle.min.css';
     ?>
 </style>
 
@@ -51,9 +46,7 @@
 
 
 <section class="reviews">
-
     <div class="swiper reviews-slider">
-
         <div class="swiper-wrapper">
             <div class="swiper-slider slide">
                 <div class="stars">
@@ -131,6 +124,7 @@
                 <span>Traveler</span>
                 <img src="images/pic-5.png" alt="">
             </div>
+            <div class="swiper-pagination"></div>
         </div>
 
     </div>
@@ -138,6 +132,8 @@
 </section>
 
 <!-- Reviews section ends here -->
+
+<script src="js/swiper-bundle.min.js"></script>
 
 <?php
     include_once'footer.php'
