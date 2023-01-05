@@ -402,16 +402,17 @@ section{
     margin-top: 1rem;
 }
 
-.destinations .box-container .box{
-    border:var(--border);
-    box-shadow: var(--box-shadow);
-    background: var(--white);
-}
-
 .destinations .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap:2rem;
+}
+
+.destinations .box-container .box{
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+    display: inline-block;
 }
 
 .destinations .load-more{
