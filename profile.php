@@ -16,8 +16,6 @@
 <section class="MyProfile">
 
     <?php
-        #$username = $_POST['username'];
-        #session_start();
         $currentUser = $_SESSION['userid'];
         $sql = "select * from users where userid ='{$currentUser}'";
         #result is the data which is obtained from the SQL query in the db
@@ -32,9 +30,7 @@
             <h3>Email: </h3><td><?php echo $row['email']; ?> </td>
             <h3>First Name: </h3><td><?php echo $row['firstname']; ?> </td>
             <h3>Last Name: </h3><td><?php echo $row['lastname']; ?></td> <?php
-
             }
-
         }
         else{
             echo "Failed to get Profile Details";
@@ -44,10 +40,6 @@
 </body>
 
 <!-- My profile code ends here -->
-
-<!-- My Bookings code starts here -->
-
-<!-- My Bookings code ends here -->
 
 <?php
     include_once'footer.php'
