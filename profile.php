@@ -36,6 +36,44 @@
             echo "Failed to get Profile Details";
         }
     ?>
+
+    <h1>Update Your Details here</h1>
+    <form action="../profile.php"
+                      method="POST"
+                      enctype="multipart/form-data"
+                >
+                    <?php
+                        $Updatesql = "Update users SET email = @email, City= 'Frankfurt'";
+
+                        $gotResuslts = mysqli_query($conn, $sql);
+
+                        if($gotResuslts){
+                            if(mysqli_num_rows($gotResuslts)>0){
+                                while($row = mysqli_fetch_array($gotResuslts)){
+                                    //print_r($row['user_name']);
+                                    ?>
+                                        <div class="form-group">
+                                            <input type="email" name="updateUserName" class="form-control" value="<?php echo $row['email']; ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="userEmail" class="form-control" value="<?php echo $row['firstname']; ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="userEmail" class="form-control" value="<?php echo $row['lastname']; ?>">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="submit" name="update"  class="btn btn-info" value="Update">
+                                        </div>
+                                    <?php
+                                }
+                            }
+                        }
+
+
+                    ?>
+                
+                </form>
 </section>
 </body>
 
