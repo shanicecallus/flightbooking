@@ -353,6 +353,10 @@ section{
  .home .swiper-button-prev{
     right: 7rem;
  } */
+ 
+.UpdateDelete {
+    align-items: right;
+}
 
 
 .reviews{
