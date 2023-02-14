@@ -46,7 +46,40 @@
                 die('ERROR: ' . $exception->getMessage());
             }
             ?>
-        <!-- PHP post to update record will be here -->
+<?php
+// check if form was submitted
+if($_POST){
+	try{
+		// write update query
+		// in this case, it seemed like we have so many fields to pass and
+		// it is better to label them and not use question marks
+		$query = "UPDATE users
+					SET email=:email, firstname=:firstname, lastname=:lastname
+					WHERE userid = {$currentUser}";
+		// prepare query for excecution
+		$stmt = $conn->prepare($query);
+		// posted values
+		$email=htmlspecialchars(strip_tags($_POST['email']));
+		$firstname=htmlspecialchars(strip_tags($_POST['firstname']));
+		$lastname=htmlspecialchars(strip_tags($_POST['lastname']));
+		// bind the parameters
+		$stmt->bindParam(':email', $email);
+		$stmt->bindParam(':firstname', $firstname);
+		$stmt->bindParam(':lastname', $lastname);
+		$stmt->bindParam(':userid', $currentUser);
+		// Execute the query
+		if($stmt->execute()){
+			echo "<div class='alert alert-success'>Record was updated.</div>";
+		}else{
+			echo "<div class='alert alert-danger'>Unable to update record. Please try again.</div>";
+		}
+	}
+	// show errors
+	catch(PDOException $exception){
+		die('ERROR: ' . $exception->getMessage());
+	}
+}
+?>
         <!--we have our html form here where new record information can be updated-->
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] . "?userid={$CurrentUser}");?>" method="post">
             <table class='table table-hover table-responsive table-bordered'>
