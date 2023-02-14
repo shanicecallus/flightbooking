@@ -54,7 +54,7 @@ if($_POST){
 		// in this case, it seemed like we have so many fields to pass and
 		// it is better to label them and not use question marks
 		$query = "UPDATE users
-					SET email=:email, firstname=:firstname, lastname=:lastname
+					SET email=$email, firstname=$firstname, lastname=$lastname
 					WHERE userid = {$currentUser}";
 		// prepare query for excecution
 		$stmt = $conn->prepare($query);
@@ -63,10 +63,10 @@ if($_POST){
 		$firstname=htmlspecialchars(strip_tags($_POST['firstname']));
 		$lastname=htmlspecialchars(strip_tags($_POST['lastname']));
 		// bind the parameters
-		$stmt->bindParam(':email', $email);
-		$stmt->bindParam(':firstname', $firstname);
-		$stmt->bindParam(':lastname', $lastname);
-		$stmt->bindParam(':userid', $currentUser);
+		// $stmt->bindParam(':email', $email);
+		// $stmt->bindParam(':firstname', $firstname);
+		// $stmt->bindParam(':lastname', $lastname);
+		// $stmt->bindParam(':userid', $currentUser);
 		// Execute the query
 		if($stmt->execute()){
 			echo "<div class='alert alert-success'>Record was updated.</div>";
@@ -81,7 +81,7 @@ if($_POST){
 }
 ?>
         <!--we have our html form here where new record information can be updated-->
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] . "?userid={$CurrentUser}");?>" method="post">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] . "?userid={$currentUser}");?>" method="post">
             <table class='table table-hover table-responsive table-bordered'>
                 <tr>
                     <td>Email</td>

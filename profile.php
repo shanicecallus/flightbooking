@@ -39,9 +39,21 @@
 </section>
 
 <section class="UpdateDelete">
-<a href="Updateprofile.php">
-   <button>Update Your Details</button>
-</a>
+    <a href="Updateprofile.php">
+    <button>Update Your Details</button>
+    </a>
+    <a href="Updateprofile.php">
+    <button>Delete Profile</button>
+    </a>
+        <?php
+        $deletesql = "DELETE FROM users WHERE userid={$currentUser}";
+
+        if (mysqli_query($conn, $deletesql)) {
+            echo "Record deleted successfully";
+        } else {
+            echo "Error deleting record: " . mysqli_error($conn);
+        }
+        ?>
 </section>
 
 
