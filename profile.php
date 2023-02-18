@@ -42,9 +42,8 @@
     <a href="Updateprofile.php">
     <button>Update Your Details</button>
     </a>
-    <a href="Updateprofile.php">
+    <a href="home.php">
     <button>Delete Profile</button>
-    </a>
         <?php
         $deletesql = "DELETE FROM users WHERE userid={$currentUser}";
 
@@ -54,6 +53,7 @@
             echo "Error deleting record: " . mysqli_error($conn);
         }
         ?>
+    </a>
 </section>
 
 
