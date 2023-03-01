@@ -42,17 +42,8 @@
     <a href="Updateprofile.php">
     <button>Update Your Details</button>
     </a>
-    <a href="home.php">
+    <a href="deleteProfile.php">
     <button>Delete Profile</button>
-        <?php
-        $deletesql = "DELETE FROM users WHERE userid={$currentUser}";
-
-        if (mysqli_query($conn, $deletesql)) {
-            echo "Record deleted successfully";
-        } else {
-            echo "Error deleting record: " . mysqli_error($conn);
-        }
-        ?>
     </a>
 </section>
 
