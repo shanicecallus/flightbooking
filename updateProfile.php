@@ -53,20 +53,17 @@ if($_POST){
 		// write update query
 		// in this case, it seemed like we have so many fields to pass and
 		// it is better to label them and not use question marks
-		$query = "UPDATE users
-					SET email=$email, firstname=$firstname, lastname=$lastname
-					WHERE userid = {$currentUser}";
-		// prepare query for excecution
-		$stmt = $conn->prepare($query);
 		// posted values
 		$email=htmlspecialchars(strip_tags($_POST['email']));
 		$firstname=htmlspecialchars(strip_tags($_POST['firstname']));
 		$lastname=htmlspecialchars(strip_tags($_POST['lastname']));
-		// bind the parameters
-		// $stmt->bindParam(':email', $email);
-		// $stmt->bindParam(':firstname', $firstname);
-		// $stmt->bindParam(':lastname', $lastname);
-		// $stmt->bindParam(':userid', $currentUser);
+
+        $query = "UPDATE users
+            SET email='$email', firstname='$firstname', lastname='$lastname'
+            WHERE userid = {$currentUser}";
+        // prepare query for excecution
+        $stmt = $conn->prepare($query);
+
 		// Execute the query
 		if($stmt->execute()){
 			echo "<div class='alert alert-success'>Record was updated.</div>";
@@ -93,7 +90,7 @@ if($_POST){
                 </tr>
                 <tr>
                     <td>Last Name</td>
-                    <td><input type='lastname' name='price' value="<?php echo htmlspecialchars($lastname, ENT_QUOTES);  ?>" class='form-control' /></td>
+                    <td><input name='lastname' value="<?php echo htmlspecialchars($lastname, ENT_QUOTES);  ?>" class='form-control' /></td>
                 </tr>
                 <tr>
                     <td></td>
