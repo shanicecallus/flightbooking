@@ -7,7 +7,7 @@
 
             <div class="box">
             <h3>Quick Links</h3>
-            <a href="home.php"><i class="fas fa-angle-right"></i> Home</a>
+            <a href="index.php"><i class="fas fa-angle-right"></i> Home</a>
             <a href="about.php"><i class="fas fa-angle-right"></i> About</a>
             <a href="destination.php"><i class="fas fa-angle-right"></i> Destination</a>
             <a href="book.php"><i class="fas fa-angle-right"></i> Book</a>

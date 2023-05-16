@@ -22,10 +22,10 @@
 <body>
     <!-- Header section starts -->
     <section class="header">
-        <a href="home.php" class="logo">Travel.</a>
+        <a href="index.php" class="logo">Travel.</a>
 
         <nav class="navbar">
-            <a href="home.php">Home</a>
+            <a href="index.php">Home</a>
             <a href="about.php">About</a>
             <a href="destination.php">Destination</a>
             <a href="book.php">Book</a>
