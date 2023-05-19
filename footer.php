@@ -16,7 +16,7 @@
             <div class="box">
             <h3>Extra Links</h3>
             <a href="FAQ.php"><i class="fas fa-angle-right"></i> FAQ</a>
-            <a href="#"><i class="fas fa-angle-right"></i> About Us</a>
+            <a href="about.php"><i class="fas fa-angle-right"></i> About Us</a>
             <a href="#"><i class="fas fa-angle-right"></i> Privacy Policy</a>
             <a href="#"><i class="fas fa-angle-right"></i> Terms of Use</a>
             </div>

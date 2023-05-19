@@ -16,6 +16,8 @@
     </p>
 
 
+    <br>
+    <br>
     <h1>
         Placing your online booking
     </h1>
@@ -23,6 +25,8 @@
         On this website you may fill in a form with your details on the <a href='book.php'> Booking </a> page. 
     </p>
 
+    <br>
+    <br>
     <h1>
         How can do I sign up?
     </h1>
