@@ -57,7 +57,7 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla exercitationem quisquam beatae nostrum reprehenderit, ipsam fuga alias recusandae unde illum minus enim nemo mollitia neque quos cum qui quas voluptates.</p>
-                <h3>Karla Farrugia</h3>
+                <h3>Joseph Pisani</h3>
                 <span>Traveler</span>
                 <img src="images/pic-1.png" alt="">
             </div>
@@ -69,7 +69,7 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatibus consequatur assumenda nostrum, quia iure ducimus sequi esse voluptates blanditiis!</p>
-                <h3>Joe Borg</h3>
+                <h3>Freya Farrugia</h3>
                 <span>Traveler</span>
                 <img src="images/pic-2.png" alt="">
             </div>
@@ -94,7 +94,7 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente commodi blanditiis mollitia ducimus repudiandae, ipsum incidunt quia, quibusdam quisquam minus alias recusandae, sit vel ea iste quam accusantium itaque eaque velit consequuntur tempore quidem. Nesciunt in fugiat impedit accusamus ducimus.</p>
-                <h3>Joe Borg</h3>
+                <h3>Karla Callus</h3>
                 <span>Traveler</span>
                 <img src="images/pic-4.png" alt="">
             </div>
@@ -111,19 +111,7 @@
                 <span>Traveler</span>
                 <img src="images/pic-5.png" alt="">
             </div>
-            <div class="swiper-slider slide">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente commodi blanditiis mollitia ducimus repudiandae, ipsum incidunt quia, quibusdam quisquam minus alias recusandae, sit vel ea iste quam accusantium itaque eaque velit consequuntur tempore quidem. Nesciunt in fugiat impedit accusamus ducimus.</p>
-                <h3>Joe Borg</h3>
-                <span>Traveler</span>
-                <img src="images/pic-5.png" alt="">
-            </div>
+
             <div class="swiper-pagination"></div>
         </div>
 

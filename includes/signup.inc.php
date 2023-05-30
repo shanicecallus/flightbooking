@@ -37,5 +37,5 @@ if(isset($_POST["submit"])) {
     createUser($conn, $firstname, $lastname, $username, $pwd);
 }
 else {
-    header("location: ../home.php");
+    header("location: ../index.php");
 }

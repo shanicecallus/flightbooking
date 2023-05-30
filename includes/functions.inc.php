@@ -76,7 +76,7 @@ function createUser($conn, $firstname, $lastname, $username, $pwd) {
     mysqli_stmt_bind_param($stmt, "ssss", $firstname, $lastname, $username, $hashedPwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../home.php");
+    header("location: ../index.php");
     exit();
 }
 
@@ -110,7 +110,7 @@ function loginUser($conn, $username, $pwd) {
         session_start(); 
         $_SESSION["userid"] = $emailExists["userid"];
         $_SESSION["useruid"] = $emailExists["email"];
-        header("location: ../home.php");
+        header("location: ../index.php");
         exit();
     }
 }

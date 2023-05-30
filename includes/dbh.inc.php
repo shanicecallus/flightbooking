@@ -1,5 +1,5 @@
 <!--<?php
-//leave php tag open
+
 $serverName ="localhost";
 $dBUsername ="root";
 $dBPassword ="";
